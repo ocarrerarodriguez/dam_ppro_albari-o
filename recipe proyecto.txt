@@ -1,0 +1,429 @@
+####titulo
+
+aplicacion para  la gestion de las uvas  con html5 y node
+
+####Índice
+
+####Obxectivos
+
+######### 3.1     Características  del  producto.
+<p>
+la aplicacion Sulfatos para el Albariño consite en un programa informatico de gestion desarollado 
+con una serie de paginas web la idea de este proyecto surge a traves de  la obligacion de registar 
+las aplicaciones de pesticidas en cualquier ambito (en este caso viña o vid)
+la aplicacion esta dividida en pequeñas paginas web que presentan distintas funcionalidaddes:
+@@##sulfatos## una parte dedicada a los sulfatos ,con un estilo de vademecum (relacion de materias activas,plazos de seguridad,marcas,productos etc)
+@@##GSM## una parte dedicada a los gastos de sulfato(estos se presentan en una tabla)esisten uns botones para presentar un modal y modificar los datos se hace un total de sulfato gastado a lo largo de las manos
+@@##GHV## una parte dedicada a las horas y los gastos de los trabajadores en la vendimia (sepresentan dos tapas con las horas realizdas y los euros a recibir por cada trabajador)
+@@## tikets pesada## es una parte dedicada a mostar la cantidad de uvas recogidas en bodega (saber en todo momento cuantos kilos me quedan antes de alcanzar el cupo del consello regulador)
+@@## facturas## parte encargada de gestionar la parte economica de la aplicacion recoge los datos de  gsm ghv tikets pesada ect  para administar el tema economico sabiendo el agricultor cuantos veneficios o perdidas le produce su explotacion
+@@## analiticas ## parte encargada dedicada a mostar las analiticas de suelo y con ello las enmiendas mineralesy organicas necesarias para el terreno
+@@## tiempo ## parte dedicada a una pequeña estacion meteorologica echa con arduino/raspberrypi para el control de los estadios fenologicos de la uvas y el control de plagas
+@@## gastos poda parrea ## parte dedicada  a las horas y gastos derivados de la poda y la parrea
+con todas estas partes pretendemos una mejor gestion por parte del agricultor de los procesos relacionados con el cuidaddo de la viña
+esperando que redunde en la calidad de la uva y la reducion de costes por parte del agricultores 
+    la aplicacion esta preparada para emitir informes en formato pdf adecuados a la normativa vigente en cuanto a la aplicacion de sulfatos y 
+    tambien realiza otro informe de veneficios/perdidas
+
+
+
+
+##los  fines de la aplicacion son :
+✓ Simplificar las tareas del viticultor
+✓ Creación de grupos que compartan conocimientos viticolas.	
+✓ Incentivar el buen uso de los pesticidas.
+✓ Ayudar en la correcta aplicacion de los sulfatos al poder comprobar las características de los productos
+✓ Conseguir	una Reducción del gasto en sulfatos al saber las cantidades y productos necesarios para la viña pudiendo asi pedirlos a un mayorista que facititara un descuento (rapel) 
+✓ Conseguir una mejor calidad sanitaria en la uva gracias a la estacion metorologica , el vademecum y la lista de los tratamientos realizados
+(
+    -la estacion meteorologica: nos indicara cuando debemos tratar 
+    -el vademecun: con que devemos tratar y cuato devemos esperar hasta el siguiente tratamiento 
+    -la lista de tratamientos: nos indica si ya hemos de trtado y cuado lo hemos hecho
+)
+##los objetivos técnicos son:
+✓ Desarrollo de  un vademecum de  sulfatos y sus características(plazos de seguridad,fotos del producto ,dosis de aplicacion )
+✓ Desarrollo de una solucion que gestione a los  empleados(poda,parrea y vendimia) y sus jornadas laborables
+✓ Desarrollo de una solucion que con los  ingresos y gastos calcule y genere un informe de  veneficios/perdidas
+✓ creacion de paginas web dinamicas atraves de javascript
+✓ creacion de plantillas html modificables atraves de node javascript
+✓ generacion  y configuracion de los intrefaces atraves de javascript
+✓ recogida  de datos verificacion y guardado en la solucion de persistencia con javasript y json
+✓ creacion del modelo de enrutado para las paguinas web en nodejs
+
+
+</p>
+#########3.2.	Duración	del	proyecto.	
+<P>
+8-9 meses desde la planificacion de la idea hasta la puesta en marcha del mismo
+01/09/2019	–	30/06/2020	
+####4.	JUSTIFICACIÓN			
+########4.1.	Análisis	del	mercado	para	el	producto.	
+En	la	actualidad pocas  aplicaciones  de gestion exiten para el campo y mas especificamente para la viña 
+si bien existen asistentes de notas o gestores de parcelas estos son todos atraves de un cloud de datos
+pero la aplicacion desarollada permite al agricultor guardar los datos de sus parcelas sin necesidad de terceras partes("ley de protecion de datos" utilizacion de los mismos sin consentimiento etc )
+atraves de una solucion con:
+ servidor local (raspberrypi con nodejs angular 8 y sqlite3 )
+ un cliente en el que se renderizaran las paguinas web(navegador)
+ 
+El tipo de mercado en el que pretendo introducir mi producto/servicio	
+podría	decirse	que	será:	
+Las	variales	que	he	analizado	para	mi	estudio	de	mercado,	son	las	siguientes:	
+✓ El cliente: es el factor más importante del entorno empresarial, pero no es el único.
+
+✓ La demanda: identificar el momento del ciclo de vida en el que se encuentra un negocio y sus posibles
+  clientes potenciales, es fundamental para no entrar en falso al sector.
+  Considero	que	el uso de las aplicaciones informáticas	y de dispositivos móviles está en pleno apogeo,
+  y que mis posibles clientes/usuarios potenciales están en un momento de crecimiento
+  porque hoy en día en prácticamente todos los hogares del mundo, hay uno o	dos	ordenadores	
+  con conexión a Internet.			
+
+✓ Los competidores: mi principal competencia se encuentra a la hora de vender el producto por Internet,
+  donde	existe un mercado global inmenso y donde cada día aparecen nuevas empresas de desarrollo.
+  Tras estudiar bien a mis principales rivales,	se aprecia una clara mayoría de	empresas 
+  que ofertan aplicaciones orientadas a la gestion de parcelas, gestion de residuos y gestion de tareas 	
+  ninguna de las analizadas te	dan	la	posibilidad	de	poder gestionar todo lo anteriormente mencionado
+  en una sola aplicacion
+  -gestion de los fitosanitarios aplicacados
+  -gestion del abonado
+  -horas de trabajo 
+  -gestion de la meteorologia  a traves de una estacion propia (funciones a futuro)
+  He investigado a fondo y sé quiénes son mis principales competidores, que ofrecen y cómo lo ofrecen 
+  He podido	identificar	sus	puntos fuertes y débiles en lo que respecta 
+  al precio, métodos de publicidad,	gestión	de la tecnología…	
+
+✓ Los proveedores: he analizado también a los que me van a suministrar una buena conexión a Internet y la electricidad. Para internet he elegido R,
+  una compañia de origen gallego que ofrece	un trato personalizado en sus oficinas locales y posee un servicio
+  técnico rápido y eficaz. Además de eso ofrecen un contrato de 100 megas y teléfono móvil por 34,71€ al mes,
+  un precio	muy	competitivo	en	comparación	a otras compañías 
+  que he visto:como por ejemplo	Vodafone y Orange.
+  En lo referente al sistema eléctrico, realizaré una revisión de las instalaciones	para asegurar su integridad	
+  y se contratará el servicio a la empresa local que tenga el control de la red electrica en la zona de actuacion( para este caso sera fenosa).	
+✓ Las	estrategias:	la aplicacion sera vendida a las bodegas atraves de un comercial que gestionara el pedido del cliente creando una solucion personalizada para cada cliente(empresa/viticultor)
+  el coste de la solucion estaría en 300€ para particulares y 1000€ para empresas.
+  De esos	importes, hay que eliminar el 21% perteneciente al iva,	
+  por lo que el incomin bruto	seria de:
+  - 237€ para una instalacion de una licencia a un viticultor  
+  - 790€ para la instalacion en empresas
+  esto se complementaria con un servicio de mantenimiento que costaria 30€  para los viticultores y 100€ para las empresas 
+  De esos	importes, hay que eliminar el 21% perteneciente al iva,	
+  por lo que el incomin bruto seria de:
+  - 23,7€ para el mantenimiento a un viticultor  
+  - 79€ para el mantenimiento en empresas
+	
+La	gestión	de	esta	aplicación	estaría	a	mi	cargo	totalmente
+pero no se descartan otras posibilidades como la creación de nuevo software Pondremos a disposición	de los comerciales un descuento	que	ayude a la expansión de la aplicación(comision de venta)	
+Este servicio consiste en generar una serie	de códigos que se pueden introducir a la hora de comprar la aplicación y que le	aplicará una comision de venta al comercial.
+Estos códigos son de uso único, por lo que no se pueden utilizar para (comprar/vender/licenciar) la aplicación más de una vez.
+El objetivo de la investigación de mi estudio de mercado:
+    saber si mi aplicación se considera	útil y si tendrá aceptación de cara al público.
+    Obtención de la	información: el	método utilizado para la obtención de información ha sido la encuesta personal,
+    realizada a diferentes viticultores	y centros de formacion donde se imparten clases para el cuidado y mantenimiento de la viña .
+    La encuesta consistía en una serie de cuestiones breves para analizar y detectar las necesidades que surgen	en este tipo de ambientes.
+Informe	del	estudio	de	mercado:
+	el sector tecnológico, sobre todo Internet y el uso de aplicaciones informáticas está experimentado	un
+    crecimiento	muy	importante, y el hecho de que en prácticamente todos los hogares se disponga de ordenadores	y de conexión a Internet,
+    es un punto a mi favor de cara a emprender mi idea de negocio.
+    Además tras tratar y analizar la información recogida en el estudio d mercado, donde se determinó que un elevado porcentaje de encuestados,	
+    manifestaron un gran interés por conocer y poder utilizar la aplicación; si unimos estos resultados
+    al gran uso que hoy en día todo el mundo le da a Internet para la búsqueda de información de productos y servicios,
+    hacen que sea factible llevar a	cabo este proyecto empresarial.	Una	vez	desarrollado el	producto se	vendería por medio	de comerciales	y	se	iniciarán	varias	campañas	publicitarias.
+    Diferentes	tiendas	 de venta de productos para el campo estárian	dispuestas	a
+    ofrecer	una	importante rebaja en el precio de determinados productos
+    (rapel por venta al consumidor y comision por venta a nuestra empresa)
+    a cambio de	que	en	la	web	se	puedan compar sus productos.
+    lo que generaría una elevada participación y un tráfico de nuevos posibles usuarios.
+     Varios profesores y maestros de la viticultura	están	
+     muy	interesados	en	el	uso	de	la	aplicación	para	
+     - gestionar las aplicaciones de productos fitosanitarios 
+     - asi como el calulo de dosis de aplicacion de producto por parte de las personas mayores,
+     lo que también generaría laentrada de nuevos clientes/usuarios curso por curso a cambio de un descuento a la hora de comprar la aplicación para los alumnos que decidan comprarla	atraves de los codigos de estos profesores.
+     Estos descuentos se aplicarán por medio de códigos ofrecidos a los mismos.	
+</P>
+
+
+5.	PLAN	DE	TRABAJO		
+5.1	Análisis	y	selección	de	especificaciones.	
+5.1.A.1.	Análisis	de	necesidades.	
+Objetivos:	
+Especificar	los	objetivos a cumplir con nuestra aplicación
+Especificar	qué	elementos serán necesarios para el desarrollo de la aplicación
+Descripción:
+En este apartado analizaremos el mercado y otras aplicaciones que estén	relacionadas con la nuestra 
+para especificar que objetivos debemos cumplir y qué necesidades deben ser satisfechas.
+Esto nos marcará unas pautas a seguir y nos ayudará a empezar con algo en mente.
+Para ello hemos de analizar	el tipo de estética y funcionalidades que tienen las aplicaciones
+de la competencia.
+ir directamente	a bodegas  para	preguntarles su	opinión	sobre una
+aplicación de estas	características para su empresa.
+preguntar a los agricultores sorbe las caracteristicas que para ellos deveria tener una 
+aplicacion para la gestion de una viña
+
+De esta forma podremos averiguar que es lo que les interesa	a los futuros clientes potenciale y centrarse
+ en satisfacer	esos intereses.	
+Una	vez	aclarados los objetivos	debemos	preparar una lista con todos los elementos	
+que	debemos	desarrollar	
+y los elementos	que	serán necesarios en nuestra solucion.	
+
+Dificultades	previsibles:	
+✓ Difícil acceso a las aplicaciones	más	usadas al ser de pago.
+✓ Conseguir que la gente se pare y te preste atención al hacerle preguntas en persona.
+✓ Al ser un concepto poco extendido muchas personas no	tienen claro que esperar de	este por lo que se
+     muestran reacios de cara a la aplicación.
+	 A pesar de que muchos se muestren mas interesados cuando se les explica más detalladamente.			
+✓ Al ser una etapa muy temprana en el desarrollo no es fácil presuponer cuáles serán las necesidades que tendremos y los elementos que necesitaremos.
+Resultados	esperados:
+✓ Lista	con	objetivos a cumplir.	
+✓ Lista	con	todos los elementos	que	necesitaremos para el desarrollo.	
+Duración prevista:	2 semanas	(septiembre 2019)	
+	
+Recursos humanos: El total de horas dedicadas será de 20.	
+	
+Recursos materiales:
+✓ Material de escritura	(bolígrafos,	lápices,	…)		
+✓ Documentos en	papel a cubrir con los resultados de las preguntas hechas a la gente en la calle.
+✓ Ordenador	y	dispositivo	Android	con	el	que	realizar	la	investigación	sobre	la	competencia.
+✓ software ocr para el analisis de las encuestas
+Presupuesto:
+esta	etapa	ha	requerido	de	los	siguientes	gastos	a	mayores:
+        	material de oficina      5€
+            material para encuestas 10€
+            software informatico    50€
+
+Ilustración	1	–	Presupuesto	del		análisis	de	necesidades	
+Responsable	de	su	realización: oscxar carreira rodriguez
+
+Evaluación:	
+Al final de esta etapa se ha conseguido	una	lista final con las necesidades que debemos cumplir y los elementos que necesitaremos.
+La cual puede observarse justo debajo de esta sección.
+A la hora de enfrentarme a las dificultades	he observado que muchas	de las aplicaciones	de la competencia
+disponen de	una	versión	de	prueba,	la	cual permite hacerse una buena idea de la estética que han elegido.
+La mayoría optan por temas elegantes  y colores claros para la las bodegas sin tener en cuenta las necesidades de las personas mayores siendo estos los usuarios mayoritariamente
+En lo que a las encuestas con la gente en la calle no he tenido ningún problema.
+    Al acercarme a lugares específicos frecuentados	por	gente del sector me	he encontrado con un gran público muy interesado por la aplicación y dispuesto a darme toda la información que necesitaba.
+    Incluso	he	hablado	con	profesores	que	dan	clases que han mostrado	un gran interés por el	tema .	
+    Al	parecer	lo	que	hacen	actualmente	es	una simple nota de con que han tratado y cuando perdiendo mucha informacion en el proceso y teniendo que redactar otro documento oficial para su posterior entrega a las autoridades competentes 	
+    En lo que a elementos que necesitaré para su desarrollo no me he encontrado con nada demasiado descabellado.
+    Se puede observar una lista al final de esta sección.	
+A continuación añado la lista de objetivos y elementos necesarios que ha resultado de este análisis:
+	Objetivos
+    ✓ Creación de listas para la compra de sulfatos.
+    ✓ Base de datos con muchos fitosanitarios.
+    ✓ Incluir información sobre la composicion del fitosanitario.
+    ✓ Incluir información sobre las materias activas/ funcionamiento del fitosanitario.
+    ✓ Reconocimiento  atraves de barcodes de un gran número de productos	.
+    ✓ cuentas para los profesores que tengan permisos específicos sobre	 los alumnos .			
+Elementos	necesarios:	
+    ✓ Software	de	desarrollo	nodejs	(Visual Studio Code)
+    ✓ Software	de	tratamiento	de	imágenes	(Gimp)	
+    ✓ Software	ofimático	(OpenOffice)	
+    ✓ Software	para	tratamiento	de	bases	de	datos	(DB Browser for SQLite)	
+    ✓ Software de desarrolo angular (Angular CLI)
+    ✓ Software para	creación web (Visual Studio Code)
+
+
+5.1.A.2.	Análisis	de	procesos.	
+Objetivos:
+✓ Analizar los pasos a seguir desde el inicio del desarrollo hasta la puesta en venta.
+✓ Estructurar las tareas y establecer un orden a seguir.
+Descripción: En este apartado debemos establecer de qué forma se cumplirán los objetivos y 
+cuales son todas las tareas que se deberán llevar a cabo además de un orden para su realización.	
+Dificultades	previsibles:	
+✓ Mi falta de experiencia en la planificación de un proyecto me dificulta esta tarea al no conocer los	
+métodos mas eficaces a seguir y al no conocer las dificultades con la que se suele	encontrar normalmente
+en una situación como esta.
+✓ La utilización de nuevas tecnologías que no he utilizado antes me puede generar problemas inesperados
+que alarguen alguna etapa más de lo esperado y retrase el resto.	
+Resultados	esperados:
+Lista de tareas a desarrollar desde el comienzo del proyecto hasta su puesta en venta.
+Duración prevista: 2 semanas  (septiembre 2019)	
+Recursos humanos: El total de horas dedicadas será de 20.	 
+Recursos	materiales:	Equipo	informático.	
+Presupuesto: esta	etapa	no	ha	requerido	de	gastos	adicionales.	
+
+Responsable	de	su	realización: oscarc carreira rodriguez	
+Evaluación:	La realización de este apartado	ha resultado muy complicada ya que existen elementos 
+que dependen de otros por lo que es muy difícil saber a cual darle preferencia.
+Por	supuesto esto es solo una predefinición de los procesos que será necesario seguir y está sujeto a cambios
+una vez dé comienzo el desarrollo.	
+✓ Análisis		de	necesidades	y	procesos.	
+✓ Definición	de	especificaciones.			
+✓ Desarrollo	de	la	aplicación	cliente(vistas).
+✓ Desarrollo	de	la	aplicación	servidor().	
+✓ Desarrollo	de	la	base	de	datos .	
+✓ Desarrollo	de	comunicación	ajax entre	cliente	y	el	servidor.	
+✓ Implementación	de	pasarela	de	pago	a	través	de	web.			
+✓ Poblar base de datos con fitosanitarios.			
+✓ Creación de la jerarquía de usuarios(permisos).			
+✓ verificacion y pruebas de sofware.					
+✓ Puesta en venta.		
+
+
+5.1.A.3.	Definición	de	especificaciones.
+Objetivos: 
+✓ Definir especificaciones básicas de nuestra aplicación.
+✓ Definir requisitos mínimos que tendrá el usuario para poder utilizarla.			
+Descripción:
+En este apartado aclararemos cuales serán las bases sobre las que funcionará nuestra aplicación y los
+requisitos mínimos que los dispositivos de los clientes deberán tener para el correcto funcionamiento de
+nuestra aplicación.
+Esto es muy importante ya que la introducción de alguna tecnología que no funcione en los dispositivos
+que un largo número de clientes tiene puede resultar fatal a la hora de promocionar el producto y puede
+acarrear problemas en lo que a postventa se refiere.	
+Dificultades previsibles:
+✓ Tener como objetivo un público muy amplio puede restringir las posibilidades de tecnologías a utilizar,
+ al igual que intentar llegar a lo más especifico disminuye el número de clientes potenciales.
+✓ Adaptar las especificaciones de la aplicación a diferentes dispositivos para optar a un público óptimo
+no es fácil.
+Resultados esperados:
+Especificaciones concretas de la aplicación.	
+Duración prevista: 1 mes (Agosto 2019)	
+Recursos humanos: El total de horas dedicadas será de 30.	
+Recursos materiales: Equipo	informático	y dispositivo móvil.	
+Presupuesto: en esta etapa no se ha requerido de gastos a mayores.	
+Responsable	de	su	realización:	oscar carreira rodriguez.	
+Evaluación:	Para comprobar que la lista de especificaciones elegidas es la correcta he contado con una 
+serie de herramientas que te permiten buscar el número de usuarios que disponen	de un cierto tipo de
+dispositivos y de cierto navegador en android.	
+Una vez estudiada toda esta información y después de hacer pruebas con diferentes casos de uso se ha 
+llegado a las siguientes conclusiones.	
+	
+Dos	de	los	navegadores	más	utilizados	es	Crome y Firefox con mas del 75 % de cuota de mercado
+
+Estos nabegadores ponen a nuestra disposición las tecnologías más modernas sin perder usuarios potenciales.
+Como se puede ver en la imagen situada a continuación optar por los siguientes de la lista aumenta mucho el
+esfuerzo constructivo y no aportaría usuarios suficientes como para justificar el paso.	
+
+En lo que a tamaños de pantalla se refiere he optado por soportar 
+tres tamaños estandares escritorio tableta y movil 
+Esto acarreará más trabajo a la hora de diseñar y desarrollar interfaces pero añade valor a la hora de
+adaptarse a diferentes dispositivos y me da la posibilidad de crear diferente contenido a mayores para
+distintos tamaños.
+mis esfuerzos se centrarán en los tamaños de  escritorio /tableta para 
+la introducion de datos / visualizacion .
+aunque la aplicacion eta preparada para moviles
+esta aplicacion entiende que desde una pantalla menor de 680 px * 480 px la visualizacion de determinados datos.
+
+
+5.2.A.1. Diseño de proceso mediante tecnología Workflow.
+Objetivos:	
+✓ Creación de un Diagrama de Flujo con los procesos a seguir.
+✓ Establecer un orden a	la hora de iniciar diferentes procesos.
+Descripción:
+Con la utilización de un Diagrama de Flujo se conseguirá una representación gráfica
+en la que están representados todos los procesos que haya que seguir y el orden en el que lo haremos.
+Esto sacará a relucir posibles incongruencias a la hora de llevar a cabo ciertas tareas y da la 
+posibilidad	de reorganizar las cosas de una forma más eficiente.	
+	
+Dificultades previsibles:
+✓ Al crear este diagrama en una etapa tan temprana podrían cometerse fallos a la hora de establecer	un
+orden.
+✓ Cuando un proceso depende de otro es complicado saber a cual darle preferencia por lo que será 
+necesario tomar muchas decisiones cuando llegue el momento a parte de lo que se decida en este apartado.			
+Resultados	esperados:	Representación gráfica de las tareas en forma de Diagrama de Flujo.	
+Duración prevista: 2 semanas (Septiembre-diciembre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 20.	
+Recursos materiales:	Equipo informático.	
+	
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Ilustración	11	–	Presupuesto	de	diseño	de	proceso	mediante	tecnología	Workflow	
+Responsable	de	su	realización:	oscar carreira rodriguez	
+	
+Evaluación:	A la hora de crear este diagrama no me he encontrado con muchas dificultades ya que el 
+desarrollo de las vistas  es bastante sencillo.
+El mayor problema es que las dos apis requieren una dedicación prácticamente simultánea	al depender	la una 
+de la otra.	Para solucionar esto he dispuesto varios metodos de las apis los cuales heremos en conjunto
+dandole una	determinada	prioridad	dependiendo	de	cómo	avance	el	proyecto.
+A continuación se puede ver el Diagrama de Flujo inicial con el que se empezará a trabajar,
+el cual marcará un guión a partir de ahora.	
+	
+
+5.2.A.2. diseño de la bd.    
+Objetivos:	
+✓ Creación de un Diagrama entidad relacion  con las tablas necesarias.
+✓ implementacion de una metodologia de tabla unica donde almacenamos todos los registros  
+✓ Establecer una relacion  entre tablas/registros.
+Descripción:
+a la hora de crear este diagrama hay que tener en cuenta los usuarios el personal las fincas el proceso de pesaje  
+Dificultades previsibles:
+al crear este diagrama al inicio del proyecto podria cometerse fallos en los campos de la bd afectando asi a tros procesos y relentizando el proyecto
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Responsable	de	su	realización:	oscar carreira rodriguez
+Duración prevista: 2 semanas (Septiembre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 60.	
+Recursos materiales:	Equipo informático.	
+Evaluación:
+✓ con este diagrama no he encontrado muchas dificultades ya que el desarrollo del
+    modelo entidad relacion es sencillo aunque extenso
+✓ podria haber campos que se tubieran que añadir despues de hacer este proceso por 
+    requerimientos de la empresa
+
+5.2.A.3. Diseño do entorno gráfico .    
+Objetivos:	
+✓ diseño de las vistas necesarias para la aplicacion en papel/fotografia.
+✓ tener un esquema de colores/paleta puesto como predeterminado pudiendo importar mas paletas segun el cliente  
+✓ definir las partes de la web los encabezados, menus ,popups, tablas .
+Descripción:
+a la hora de crear este diseño hay que tener en cuenta las caracteristicas de los usuarios
+normalmente gentede avanzada edad  (maximizar la usabilidad)  
+Dificultades previsibles:
+al crear este diseño nos encontramos con gente que puede tener nula cultura informatica asi 
+tendremos que ser auto explicativos en el flujo de trabajo
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Responsable	de	su	realización:	oscar carreira rodriguez
+Duración prevista: 2 semanas (septiembre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 60.	
+Recursos materiales:	Equipo informático.	
+Evaluación:
+✓ presentacion de una preview a la empresa(imagenes con la pagina renderizada)
+✓ esquema de colores en armonia con el logotipo de la empresa
+
+5.2.A.4. desarollo de estructura general de la bd.    
+Objetivos:	
+✓ diseño de las tablas  necesarias para iniciar la aplicacion (sistema de usuararios /sistema de permisos/conjuntos de fincas).
+✓ conseguir logear a un usuario a la aplicacion y saber las fincas asociadas al mismo   
+✓ gestionar la sesion del usuario
+✓ diseño del sistema para dar de alta al usuario
+Descripción:
+intentar que este diseño sea lo mas escueto posible 
+Dificultades previsibles:
+al crear este diseño nos encontramos con gente que puede tener nula cultura informatica asi 
+tendremos que ser auto explicativos en el registro de usuarios o la introducion de fincas
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Responsable	de	su	realización:	oscar carreira rodriguez
+Duración prevista: 2 semanas (octubre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 80.	
+Recursos materiales:	Equipo informático.	
+
+5.2.A.5. desarollo de aplicacion web con nodejs parte modelos.    
+Objetivos:	
+✓ diseño y desarrollo de los modelos necesarios para las tablas de la base de datos
+Descripción:
+hacer la conversion de las tablas a objetos dentro de la aplicacion
+cargar solo los datos pertenecientes al año de trabajo para la vista actual
+intentar que este diseño sea lo mas escueto posible 
+
+Dificultades previsibles:
+algunos datos son atemporales por tanto los tendremos que cargar en cualquier vista
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Responsable	de	su	realización:	oscar carreira rodriguez
+Duración prevista: 2 semanas (octubre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 80.	
+Recursos materiales:	Equipo informático.	
+
+
+
+5.2.A.5. desarollo de aplicacion web con nodejs parte controladores.
+Objetivos:	
+✓ diseño y desarrollo de los controladores necesarios para las vistas
+✓ gestionar la sesion del usuario en nodejs
+ 
+Descripción:
+
+intentar que este diseño sea lo mas escueto posible 
+Dificultades previsibles:
+
+Presupuesto: en esta etapa no hemos requerido de gastos	a mayores.	 
+Responsable	de	su	realización:	oscar carreira rodriguez
+Duración prevista: 2 semanas (noviembre 2019)	
+Recursos humanos:	El total de	horas dedicadas será de 80.	
+Recursos materiales:	Equipo informático.	
